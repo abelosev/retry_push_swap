@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   reverse.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anbelose <anbelose@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/20 21:48:38 by anbelose          #+#    #+#             */
+/*   Updated: 2025/10/20 21:49:00 by anbelose         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	do_rotrev(t_node **node)
@@ -16,7 +28,7 @@ void	do_rotrev(t_node **node)
 	prev_last->next = NULL;
 }
 
-void 	do_rr(t_node **a, t_node **b)
+void	do_rr(t_node **a, t_node **b)
 {
 	if (a && b)
 	{

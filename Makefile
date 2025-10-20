@@ -1,8 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: anbelose <anbelose@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/10/20 21:43:15 by anbelose          #+#    #+#              #
+#    Updated: 2025/10/20 21:43:30 by anbelose         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME	= push_swap
 CC		= cc
 CFLAGS	= -Wall -Werror -Wextra
 LIB		= libft/libft.a
-INC	= -Iinc -Ilibft
+INC		= -Iinc -Ilibft
 
 SRCDIR = src/
 OBJDIR = obj/

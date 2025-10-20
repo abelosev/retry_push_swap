@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   input_tab.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anbelose <anbelose@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/20 21:46:04 by anbelose          #+#    #+#             */
+/*   Updated: 2025/10/20 21:47:24 by anbelose         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	is_sign(char c)
@@ -33,7 +45,7 @@ int	check_vide(int ac, char **av)
 	return (0);
 }
 
-char **get_tab(int ac, char **av)
+char	**get_tab(int ac, char **av)
 {
 	char	**tab;
 
@@ -56,17 +68,20 @@ char **get_tab(int ac, char **av)
 
 char	**get_input_tab(int ac, char **av)
 {
-	int		i;
-	char	**tab;	
-	long	tmp;
+	int			i;
+	char		**tab;	
+	long		tmp;
 
 	tab = get_tab(ac, av);
 	if (!tab)
 		return (NULL);
-	i = (ac == 2) ? 0 : 1;
+	if (ac == 2)
+		i = 0;
+	else
+		i = 1;
 	while (tab[i])
 	{
-		tmp = ft_atoi(tab[i]);
+		tmp = ft_atoi_modif(tab[i]);
 		if (!is_number(tab[i]) || tmp < INT_MIN || tmp > INT_MAX)
 		{
 			tab_free(tab);

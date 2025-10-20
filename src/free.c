@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   free.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anbelose <anbelose@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/20 21:44:52 by anbelose          #+#    #+#             */
+/*   Updated: 2025/10/20 21:45:50 by anbelose         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	del_stack(t_node **node)
@@ -40,14 +52,14 @@ void	tab_free(char **tab)
 	free(tab);
 }
 
-char **copy_tab(char **tab)
+char	**copy_tab(char **tab)
 {
-	int i;
-	int len;
-	char **res;
+	int		i;
+	int		len;
+	char	**res;
 
 	len = 0;
-	while(tab[len])
+	while (tab[len])
 		len++;
 	res = malloc(sizeof(char *) * (len + 1));
 	if (!res)
