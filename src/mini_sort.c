@@ -76,7 +76,7 @@ void	mini_sort(t_node **a, t_node **b)
 {
 	int	size;
 
-	if (is_sorted(a) == 1 || list_size(*a) == 0
+	if (is_sorted(a) || list_size(*a) == 0
 		|| list_size(*a) == 1)
 		return ;
 	size = list_size(*a);
