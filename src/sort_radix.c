@@ -48,7 +48,7 @@ void	sort_radix(t_node **a, t_node **b)
 	int		size;
 	int		bits_max;
 
-	if (is_sorted(a) == 1)
+	if (is_sorted(a))
 		return ;
 	i = 0;
 	first_a = *a;
@@ -62,7 +62,7 @@ void	sort_radix(t_node **a, t_node **b)
 			first_a = *a;
 			radix_suppl(a, b, first_a, i);
 		}
-		while (list_size(*b) != 0)
+		while (list_size(*b))
 			do_pa(b, a);
 		i++;
 	}
