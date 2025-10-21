@@ -21,7 +21,7 @@ int	max_bits(t_node **node)
 	first = *node;
 	max_index = first->index;
 	bits_max = 0;
-	while (first != NULL)
+	while (first)
 	{
 		if (first->index > max_index)
 			max_index = first->index;
