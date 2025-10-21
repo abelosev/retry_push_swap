@@ -16,7 +16,7 @@ void	do_p(t_node **p_from, t_node **p_to)
 {
 	t_node	*temp;
 
-	if (*p_from == NULL)
+	if (!(*p_from))
 		return ;
 	temp = (*p_from)->next;
 	(*p_from)->next = *p_to;

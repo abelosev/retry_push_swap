@@ -21,7 +21,7 @@ void	do_rot(t_node **node)
 	temp = *node;
 	temp2 = (*node)->next;
 	last = *node;
-	while (last->next != NULL)
+	while (last->next)
 		last = last->next;
 	last->next = temp;
 	temp->next = NULL;

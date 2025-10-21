@@ -16,7 +16,7 @@ void	do_swap(t_node *node)
 {
 	int	temp;
 
-	if (node == NULL || node->next == NULL)
+	if (!node || !(node->next))
 		return ;
 	temp = node->value;
 	node->value = node->next->value;

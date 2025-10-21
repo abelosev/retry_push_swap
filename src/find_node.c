@@ -53,17 +53,14 @@ t_node	*find_next_min(t_node **node)
 	min = NULL;
 	has_min = 0;
 	head = *node;
-	if (head)
+	while (head)
 	{
-		while (head)
+		if ((head->index == -1) && (!has_min || head->value < min->value))
 		{
-			if ((head->index == -1) && (!has_min || head->value < min->value))
-			{
-				min = head;
-				has_min = 1;
-			}
-			head = head->next;
+			min = head;
+			has_min = 1;
 		}
+		head = head->next;
 	}
 	return (min);
 }
